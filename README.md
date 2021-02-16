@@ -2,7 +2,28 @@
 
 Example of a development environment with Django + React + Mysql + Nginx + Docker.
 
-**TODO** Escrever uma descrição completa dos componentes e da estrutura. 
+This template aims to be a starting point for a web project using Django and React in docker images.
+
+* **Backend** - [Python 3.9](https://hub.docker.com/_/python) + [Django 3.1.6](https://docs.djangoproject.com/en/3.1/) + [Django REST Framework 3.12.2](https://www.django-rest-framework.org/)
+* **Frontend** - [Node 12.16.2](https://hub.docker.com/_/node) + [React 17.0.1](https://pt-br.reactjs.org/) + [Material UI 4.11](https://material-ui.com/)
+* **Database** - [Mysql 8.0](https://hub.docker.com/_/mysql)
+* **Webserver** - [nginx latest version](https://hub.docker.com/_/nginx)
+
+In this project, Backend is responsible for serving the data through a REST API.
+The frontend is made separately with React that communicates with the backend through the address /api.
+
+The two services are behind the Ngnix that receives the requests and based on the address directs to the specific service.
+example urls /api and /admin are redirected to the backend service.
+
+while the url /* is redirected to frontend, as this is a development environment the request goes to the development server this allows the use of live reload. when the project goes to production, the frontend app becomes a folder with the build and ngnix will only serve the static files.
+
+## Requirements
+
+* [Git](https://git-scm.com/download/linux)
+* [Docker](https://docs.docker.com/engine/install/ubuntu/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
+
+basic knowledge about the technologies involved in this project is necessary. each of the frameworks used can be replaced by others.
 
 ## Installation
 
@@ -136,3 +157,7 @@ Open the Browser and access the environment at the following URLs
 * http://localhost/admin/ - Django administration use the superuser to login.
 
 * http://localhost/api/ - Django REST browsable API.
+
+## Project Structure
+
+**TODO:** Descrever a estrutura do projeto cada pasta e os arquivos de configuração.
