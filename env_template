@@ -1,0 +1,6 @@
+
+#Django Settings
+DJANGO_SECRET_KEY="^1_ck+e&ir#*8n3b6kf)rhw@1=n$+2w-xfboiol9mn_8&x1$(k"
+DJANGO_DEBUG="True"
+DJANGO_LOG_LEVEL="DEBUG"
+DJANGO_ALLOWED_HOSTS="localhost"
