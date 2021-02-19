@@ -1,15 +1,15 @@
 
 # Django Settings
 # A secret key for a particular Django installation https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-SECRET_KEY
-DJANGO_SECRET_KEY="CREATE_A_SECRET_KEY_AND_PASTE_HERE!"
+DJANGO_SECRET_KEY=CREATE_A_SECRET_KEY_AND_PASTE_HERE!
 # A boolean that turns on/off debug mode. https://docs.djangoproject.com/en/3.1/ref/settings/#debug
-DJANGO_DEBUG="True"
+DJANGO_DEBUG=True
 # Defines the level of log messages. https://docs.python.org/3/library/logging.config.html#configuration-file-format
 # The level entry can be one of DEBUG, INFO, WARNING, ERROR, CRITICAL
-DJANGO_LOG_LEVEL="DEBUG"
+DJANGO_LOG_LEVEL=DEBUG
 # A list of strings representing the host/domain names that this Django site can serve. https://docs.python.org/3/library/logging.config.html#configuration-file-format
 # Accepts multiple hosts separated by commas and without space
-DJANGO_ALLOWED_HOSTS="localhost"
+DJANGO_ALLOWED_HOSTS=localhost
 
 # Mysql
 MYSQL_HOST=database
@@ -17,4 +17,4 @@ MYSQL_PORT=3306
 MYSQL_DATABASE=your_database_name
 MYSQL_USER=your_user
 MYSQL_PASSWORD=your_password
-MYSQL_RANDOM_ROOT_PASSWORD='1'
+MYSQL_RANDOM_ROOT_PASSWORD=yes

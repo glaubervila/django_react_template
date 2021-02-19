@@ -134,6 +134,32 @@ After creating the Django administrator user, turn off the backend.
 
 go back to the terminal where it is and press CTRL + C or execute `docker-compose stop`
 
+Build Frontend for first time
+
+At the root of the project execute the frontend build, in this example the parameter --no-cache is being used to guarantee an image created from scratch, then this parameter is no longer needed.
+
+``` shell
+docker-compose build --no-cache frontend
+```
+
+This build takes time and some warnigs from the dependencies may appear. the build ends successfully when this message `Successfully tagged django_react_template_frontend: latest`
+
+after the build start the frontend.
+
+``` shell
+docker-compose up frontend
+```
+
+with the container on, open a new terminal and run the yarn command to ensure that all dependencies have been installed.
+
+``` shell
+docker exec -it django_react_template_frontend_1 yarn
+```
+
+go back to the terminal where it is and press CTRL + C or execute `docker-compose stop`
+
+now all services are ready to be started together.
+
 Start all services
 
 ``` shell
