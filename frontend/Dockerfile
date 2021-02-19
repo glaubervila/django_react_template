@@ -5,7 +5,7 @@ WORKDIR /app
 # Install app dependencies
 COPY package*.json ./
 
-RUN yarn --ignore-optional
+RUN yarn 
 
 # Bundle app source
 COPY . /app
