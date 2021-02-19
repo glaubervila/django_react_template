@@ -33,9 +33,12 @@ services:
   frontend:
     user: 1000:1000
     build: ./frontend
+    stdin_open: true
+    environment:
+      - CI=true
     volumes:
       - ./frontend:/app
-    command: yarn start
+    # command: yarn start
 
   # Web Server Nginx 
   nginx:

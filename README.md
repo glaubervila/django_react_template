@@ -142,7 +142,7 @@ At the root of the project execute the frontend build, in this example the param
 docker-compose build --no-cache frontend
 ```
 
-This build takes time and some warnigs from the dependencies may appear. the build ends successfully when this message `Successfully tagged django_react_template_frontend: latest`
+the build ends successfully when this message `Successfully tagged django_react_template_frontend: latest`
 
 after the build start the frontend.
 
@@ -154,6 +154,17 @@ with the container on, open a new terminal and run the yarn command to ensure th
 
 ``` shell
 docker exec -it django_react_template_frontend_1 yarn
+```
+
+This takes time and some warnigs from the dependencies may appear.
+
+after installation edit docker-compose.yml and uncomment command line.
+
+``` shell
+# Frontend React
+frontend:
+  ...
+  command: yarn start
 ```
 
 go back to the terminal where it is and press CTRL + C or execute `docker-compose stop`
